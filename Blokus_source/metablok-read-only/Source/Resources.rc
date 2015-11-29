@@ -1,0 +1,35 @@
+
+// Resource definitions
+#include "Resources.h"
+
+//
+// Window Icons
+//
+IDI_SMALL               ICON         "small.ico"
+IDI_LARGE				ICON         "large.ico"
+
+//
+// Version Info
+//
+1 VERSIONINFO
+    FILEVERSION     0,0,0,0
+    PRODUCTVERSION  0,0,0,0
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "04090025"
+        {
+            VALUE "FileDescription", "Match Simulator"
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "MetaBlok"
+            VALUE "LegalCopyright", "(C) 2011 Lucas Sherman, David Gloe, Tobia Gulden, Mary Southern"
+            VALUE "OriginalFilename", "MetaBlok.exe"
+            VALUE "ProductName", "Blokus Match Simulator"
+            VALUE "ProductVersion", "1.0"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0409, 0x0025
+    }
+}

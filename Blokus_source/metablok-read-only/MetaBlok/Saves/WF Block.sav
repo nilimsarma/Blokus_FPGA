@@ -1,0 +1,19 @@
+// --------------------------------
+//        Blokus Save File
+// --------------------------------
+
+// MatchSettings
+Number_Of_Players 2
+Size_Of_Board 14
+
+// Start Tiles
+Start_Tile 0 4 4
+Start_Tile 1 9 9
+
+// Move History
+Move 16 3 3 0 0
+Move 11 6 6 1 1
+
+// Available Pieces
+Pieces 0 111111111111111101111
+Pieces 1 111111111110111111111

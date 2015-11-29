@@ -1,0 +1,46 @@
+// ---------------------------------------------------------
+//   
+//                           MINIMAX
+//
+// ---------------------------------------------------------
+
+// ---------------------------------------------------------
+//                        INTRODUCTION
+// ---------------------------------------------------------
+
+A simple AI player which utilizes the minimax algorithm with
+alpha-beta pruning. 
+
+For specific information on the AI player communication format
+see the project readme.txt file
+
+
+// ---------------------------------------------------------
+//                           FILES
+// ---------------------------------------------------------
+
+main.h - Opens the memory mapped file and executes the move
+         selection function when it is the players turn.
+
+Minimax.h - Defines the minimax AI player class
+
+Minimax.cpp - Implements the minimax AI player move selection
+              functions. Includes actual minimax search and
+              move enumeration functions.
+
+Heuristic.h - Defines the heuristic function prototype.
+
+Heuristic.cpp - Implements heuristic functions and provides
+                some debug mode description information.
+
+Includes.h - Includes some standard files used across several
+             of the source units.
+
+// ---------------------------------------------------------
+//                           NOTES
+// ---------------------------------------------------------
+
+Move enumeration is designed to implicitly order pieces by
+size, alterations will affect the alpha-beta pruning.
+
+See in code documentation for more implementation details.

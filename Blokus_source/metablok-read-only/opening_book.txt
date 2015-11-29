@@ -1,0 +1,109 @@
+Opening Book Readme
+
+A. Table of Contents
+--------------------------------------------------------------------------------
+    A. Table of Contents
+    B. Version History
+    C. Opening Book
+    D. Line Format
+    E. File Format
+    F. Example File
+    G. Piece Number Table
+
+B. Version History
+--------------------------------------------------------------------------------
+1.0     10/19/11    Initial Version
+
+C. Opening Book
+--------------------------------------------------------------------------------
+An opening book is a tree of moves which provides a list of the most common
+opening moves in a game of Blokus. Since there could be multiple common 
+moves in any given situation, a probability is given to each possible move.
+This allows for some variation in AI play, weighted toward stronger lines.
+
+D. Line Format
+--------------------------------------------------------------------------------
+If the first non-whitespace character on a line is not a number, the line
+is treated as a comment.
+
+Each line is a space-separated move listing containing the fields
+<ply number> <probability> <piece number> <grid x> <grid y> <flipped> <rotated>
+
+ply number: The ply of the move, starting at 1. For example, the first move by
+    the first player has ply 1, and the first move by the second player has
+    ply 2.
+probability: The probability the AI will play the move in this position (0-1).
+    The sum of the probabilities of the children of branch nodes must equal 1.
+piece number: For piece numbers, consult section G.
+grid x: The x value where the center of the piece will be placed (0-19).
+grid y: The y value where the center of the piece will be placed (0-19).
+flipped: Whether the piece has been flipped horizontally or not (0-1).
+rotated: The rotation of the piece (0-3)
+    0 - 0 degrees
+    1 - 90 degrees clockwise
+    2 - 180 degrees clockwise
+    3 - 270 degrees clockwise
+    
+NOTE: A probability of 0 can be used for cases where the AI will never
+make the move, but a human may do so. This allows us to store responses to
+these moves.
+
+NOTE: There is no need to duplicate lines where the flip/rotation doesn't
+affect the move. For example, flipping/rotating the X piece has no effect, so
+only one entry is needed for the X piece, and the flip/rotation values 
+will be ignored.
+    
+E. File Format
+--------------------------------------------------------------------------------
+The ordering of lines must be a depth-first traversal of the move tree. The
+depth in the tree is determined by the ply. This ensures an unambiguous 
+description of unbalanced move trees. 
+
+For example, for an opening book of depth 3 with two move possibilities at each
+node, use the ply ordering 12332331233233, not 11222233333333.
+
+F. Example File
+--------------------------------------------------------------------------------
+This example file shows the two possibilities from this blog post:
+http://duotothedeath.wordpress.com/2010/04/06/xf-rubik-two-lines-of-defence/
+
+# Orange plays X
+1 1.0 20 5 4 0 0
+
+# Purple replies X
+2 1.0 20 8 9 0 0
+
+# The XF Rubik
+3 1.0 11 7 6 0 1
+
+# Two valid lines of defense
+4 0.5 11 5 8 0 0
+4 0.5 11 5 8 1 1
+
+G. Piece Number Table
+--------------------------------------------------------------------------------
+Pictures of the pieces with the names used in this table can be found here:
+http://duotothedeath.files.wordpress.com/2009/05/piecenames.jpg
+
+Number  Name
+0       1
+1       2
+2       I3
+3       V3
+4       T4
+5       Z4
+6       I4
+7       L4
+8       O
+9       P
+10      U
+11      F
+12      I5
+13      L5
+14      V5
+15      N
+16      W
+17      Z5
+18      Y
+19      T
+20      X

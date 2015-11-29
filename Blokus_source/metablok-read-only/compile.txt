@@ -1,0 +1,36 @@
+The following are instructions for compiling the program source code and associated AI modules:
+
+Note that the release builds for each AI module are already located in the Players 
+sub-directory of the MetaBlok folder so that the program may be played without compiling the 
+source code. Simply launch the MetaBlok.exe executable program from the MetaBlok folder and the
+program will detect any files within the Players directory.
+
+The simulator was developed using Windows Visual Studio 2008 and the DirectX9 SDK, both of 
+these products could be acquired from the web pages below at the time of this writing. Visual
+Studio 2010 may work as well, however all of the programs included with this project have
+been tested exclusively using Visual Studio 2008. (The free Express Edition)
+
+If you have not already, the DirectX sdk must be setup for use with Visual Studio prior to
+compiling the main program code. If you have run Visual Studio prior to installing the
+DirectX SDK, the relevant files may already have been added. If not, you will likely receive
+the error "Cannot open include file: 'd3d9.h': No such file or directory". All other project
+files can be compiled without linking to the DirectX SDK.
+
+As stated above, after installation Visual Studio must be told where the DirectX SDK files
+reside if it was not done automatically. Instructions for doing so are as follows:
+
+      (1) Open the "Tools" menu and select "Options..."
+      (2) Select "Projects and Solutions" -> "VC++ Directories"
+      (3) TODO
+
+All project files compile to the MetaBlok directory by default. AI Player projects will compile
+to the subdirectory MetaBlok/Players while the main program compiles to MetaBlok/. ( If you are
+unfamiliar with VS, the hotkey for build is F7. )
+
+Dependancies:
+
+    VISUAL STUDIO: http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express 
+        http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=14597
+
+    DIRECT_X SDK: http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=6812 
+            ( install after Visual Studio 2008, some older versions may work as well )

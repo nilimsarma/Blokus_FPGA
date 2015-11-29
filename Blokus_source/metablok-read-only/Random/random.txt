@@ -1,0 +1,39 @@
+// ---------------------------------------------------------
+//   
+//                           RANDOM
+//
+// ---------------------------------------------------------
+
+// ---------------------------------------------------------
+//                        INTRODUCTION
+// ---------------------------------------------------------
+
+A simple example of an AI player for Blokus. This might be a 
+good format to use when developing your own AI players. The AI 
+player simply enumerates all available moves at the given game 
+state and returns one at random. 
+
+For specific information on the AI player communication format
+see the project readme.txt file
+
+
+// ---------------------------------------------------------
+//                           FILES
+// ---------------------------------------------------------
+
+main.h - Opens the memory mapped file and executes the move
+         selection function when it is the players turn.
+
+Random.h - Defines the random AI player class
+
+Random.cpp - Implements the random AI player move selection
+             functions.
+
+Includes.h - Includes some standard files used across several
+             of the source units.
+
+// ---------------------------------------------------------
+//                           NOTES
+// ---------------------------------------------------------
+
+See in code documentation for more implementation details.
